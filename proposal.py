@@ -16,7 +16,11 @@ class Proposer():
         return Proposer(soup.find('span', class_='green').get_text())
 
 class Proposal():
-    def __init__(self, name: str):
-        self.name = name
+    def __init__(self, title: str):
+        self.title = title
         self.proposers: List[Proposer] = []
         self.processes: List[Process] = []
+    
+    @staticmethod
+    def getTitle(soup: BeautifulSoup):
+        return soup.find('h4', class_='up').get_text()
