@@ -20,7 +20,11 @@ class Proposal():
         self.title = title
         self.proposers: List[Proposer] = []
         self.processes: List[Process] = []
-    
+
     @staticmethod
     def getTitle(soup: BeautifulSoup):
         return soup.find('h4', class_='up').get_text()
+    
+    @staticmethod
+    def createProposalObj(soup: BeautifulSoup):
+        return Proposal(Proposal.getTitle(soup))
