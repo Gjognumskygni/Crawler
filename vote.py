@@ -1,12 +1,10 @@
 from bs4 import BeautifulSoup
 from typing import List
 
-def getMetaData(soup: BeautifulSoup):
-    strong_list = soup.find_all('strong')
-    return strong_list[2].get_text(), strong_list[4].get_text(), strong_list[6].get_text(), strong_list[8].get_text() 
-
 class Vote():
-    def __init__(self, present: int, yes: int, no: int, blank: int, yes_list: List[str], no_list: List[str], blank_list: List[str]):
+    def __init__(self, title: BeautifulSoup, process: str, present: int, yes: int, no: int, blank: int, yes_list: List[str], no_list: List[str], blank_list: List[str]):
+        self.title = title
+        self.process = process
         self.present = present
         self.yes = yes
         self.no = no
@@ -16,8 +14,8 @@ class Vote():
         self.blank_list = blank_list 
 
     @staticmethod
-    def createVoteObj(soup: BeautifulSoup):
-        present, yes, no, blank = getMetaData(soup)
+    def createVoteObj(soup: BeautifulSoup, process: str):
+        title = soup.find('b').get_text()
         yes_list = []
         no_list = []
         blank_list = []
@@ -44,4 +42,4 @@ class Vote():
                     no_list.append(td.get_text().split('. ')[1])
                 elif isBlank == True:
                     blank_list.append(td.get_text().split('. ')[1])
-        return Vote(present, yes, no, blank, yes_list, no_list, blank_list)
+        return Vote(title, process, (len(yes_list) + len(no_list) + len(blank_list)), len(yes_list), len(no_list), len(blank_list), yes_list, no_list, blank_list)
