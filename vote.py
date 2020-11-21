@@ -15,13 +15,13 @@ class Vote():
 
     @staticmethod
     def createVoteObj(soup: BeautifulSoup, process: str):
-        title = soup.find('b').get_text()
-        yes_list = []
-        no_list = []
-        blank_list = []
-        isYes = False
-        isNo = False
-        isBlank = False
+        title: str = soup.find('b').get_text()
+        yes_list: List[str] = []
+        no_list: List[str] = []
+        blank_list: List[str] = []
+        isYes: bool = False
+        isNo: bool = False
+        isBlank: bool = False
         for td in soup.find_all('td'):
             if len(td.get_text()) > 1:
                 if "JA:" in td.get_text():

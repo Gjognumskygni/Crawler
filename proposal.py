@@ -25,20 +25,20 @@ class Proposal():
         newSoup: BeautifulSoup = soup
         process: str = ""
         for tr in soup.find_all("tr"):
-            th = (tr.find("th")).get_text()
+            th: str = (tr.find("th")).get_text()
             if "Skjal" in th:
-                a = tr.find('a', href=True)
-                newSoup = makeRequest(a['data-url'])
+                a: BeautifulSoup = tr.find('a', href=True)
+                newSoup: BeautifulSoup = makeRequest(a['data-url'])
             elif "Atkvøða greidd í" in th:
                 process = (tr.find("td")).get_text()
         return Vote.createVoteObj(newSoup, process)
     
     @staticmethod
     def createProposalObj(soup: BeautifulSoup):
-        returnObj = Proposal(Proposal.getTitle(soup), "uppskot")
-        a = soup.find('table', class_="table")
+        returnObj: Proposal = Proposal(Proposal.getTitle(soup), "uppskot")
+        a: BeautifulSoup = soup.find('table', class_="table")
         for tr in a.find_all("tr"):
-            th = (tr.find("th")).get_text()
+            th: str = (tr.find("th")).get_text()
             if "Slag" in th:
                 returnObj.type = (tr.find("td")).get_text()
             elif "Uppskotssetari" in th:
@@ -46,10 +46,10 @@ class Proposal():
                     returnObj.proposers.append(div.get_text())
             elif "Atkvøðugreiðslur" in th:
                 for a in tr.find_all('a', href=True):
-                    url = "https://www.logting.fo" + a['href']
-                    newSoup = makeRequest(url)
+                    url: str = "https://www.logting.fo" + a['href']
+                    newSoup: BeautifulSoup = makeRequest(url)
                     for link in newSoup.find_all('div', class_='macroContainer'):
                         if 'GetVoteDetail' in link['data-url']:
-                            voteUrl = "https://www.logting.fo" + link['data-url']
+                            voteUrl: str = "https://www.logting.fo" + link['data-url']
                             returnObj.votes.append(Proposal.getVotes(makeRequest(voteUrl), voteUrl))
         return returnObj
