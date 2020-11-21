@@ -15,7 +15,11 @@ class Vote():
 
     @staticmethod
     def createVoteObj(soup: BeautifulSoup, process: str):
-        title: str = soup.find('b').get_text()
+        b = soup.find('b')
+        if b is None:
+            title = ""
+        else:
+            title: str = b.get_text()
         yes_list: List[str] = []
         no_list: List[str] = []
         blank_list: List[str] = []
@@ -37,9 +41,19 @@ class Vote():
                     isYes = False
                     isNo = False
                 elif isYes == True:
-                    yes_list.append(td.get_text().split('. ')[1])
+                    print(td.get_text())
+                    if ". " in td.get_text():
+                        yes_list.append(td.get_text().split('. ')[1])
+                    else:
+                        yes_list.append(td.get_text().split('.')[1])
                 elif isNo == True:
-                    no_list.append(td.get_text().split('. ')[1])
+                    if ". " in td.get_text():
+                        no_list.append(td.get_text().split('. ')[1])
+                    else:
+                        no_list.append(td.get_text().split('.')[1])
                 elif isBlank == True:
-                    blank_list.append(td.get_text().split('. ')[1])
+                    if ". " in td.get_text():
+                        blank_list.append(td.get_text().split('. ')[1])
+                    else:
+                        blank_list.append(td.get_text().split('.')[1])
         return Vote(title, process, (len(yes_list) + len(no_list) + len(blank_list)), len(yes_list), len(no_list), len(blank_list), yes_list, no_list, blank_list)
