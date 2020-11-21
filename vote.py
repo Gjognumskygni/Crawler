@@ -41,7 +41,6 @@ class Vote():
                     isYes = False
                     isNo = False
                 elif isYes == True:
-                    print(td.get_text())
                     if ". " in td.get_text():
                         yes_list.append(td.get_text().split('. ')[1])
                     else:
