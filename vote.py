@@ -15,10 +15,10 @@ class Vote():
 
     @staticmethod
     def createVoteObj(soup: BeautifulSoup, process: str):
-        b = soup.find('b')
-        span = soup.find('span')
+        b: BeautifulSoup = soup.find('b')
+        span: BeautifulSoup = soup.find('span')
         if b is None:
-            title = ""
+            title: str = ""
         elif span is not None:
             title: str = span.get_text()
         else:

@@ -21,12 +21,11 @@ class Link():
 
     @staticmethod
     def createLinkObj(td: BeautifulSoup):
-        a = td[0].find("a")
+        a: BeautifulSoup = td[0].find("a")
         number: str = a.get_text()
-        print(number)
         proposalUrl: str = Link.getUrl(a)
         title: str = td[1].get_text()
-        committeeA = td[2].find("a")
+        committeeA: BeautifulSoup = td[2].find("a")
         if "Ikki brúkt" in title:
             committeeName: str = td[2].get_text()
             committeeUrl: str = ""
@@ -36,5 +35,5 @@ class Link():
         else:
             committeeName: str = committeeA.get_text()
             committeeUrl: str = Link.getUrl(committeeA)
-        status:str = td[3].get_text()
+        status: str = td[3].get_text()
         return Link(number, proposalUrl, title, committeeName, committeeUrl, status)

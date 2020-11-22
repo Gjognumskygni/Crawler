@@ -90,7 +90,7 @@ def _proposalDecoder(proposalDict):
     return returnObj
 
 def ProposalFromFile():
-    proposals = []
+    proposals: List[Proposal] = []
     with open('2014-2019data.json') as json_file:
         proposalList = json.load(json_file)
         for proposalDict in proposalList:

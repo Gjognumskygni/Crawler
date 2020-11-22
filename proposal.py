@@ -13,14 +13,6 @@ class Proposal():
         self.votes: List[Vote] = []
 
     @staticmethod
-    def getProposer(soup: BeautifulSoup) -> str:
-        return soup.find('span', class_='green').get_text()
-
-    @staticmethod
-    def getTitle(soup: BeautifulSoup) -> str:
-        return soup.find('h5', class_="pb-5 pt-3").get_text()
-
-    @staticmethod
     def getVotes(soup: BeautifulSoup, url: str) -> Vote:
         newSoup: BeautifulSoup = soup
         process: str = ""
@@ -30,7 +22,7 @@ class Proposal():
                 a: BeautifulSoup = tr.find('a', href=True)
                 newSoup: BeautifulSoup = makeRequest(a['data-url'])
             elif "Atkvøða greidd í" in th:
-                process = (tr.find("td")).get_text()
+                process: str = (tr.find("td")).get_text()
         return Vote.createVoteObj(newSoup, process)
     
     @staticmethod
@@ -40,7 +32,7 @@ class Proposal():
         for tr in table.find_all("tr"):
             th: str = (tr.find("th")).get_text()
             if "Slag" in th:
-                returnObj.type = (tr.find("td")).get_text()
+                returnObj.type: str = (tr.find("td")).get_text()
             elif "Uppskotssetari" in th:
                 for div in tr.find_all('div'):
                     returnObj.proposers.append(div.get_text())
