@@ -34,10 +34,10 @@ class Proposal():
         return Vote.createVoteObj(newSoup, process)
     
     @staticmethod
-    def createProposalObj(soup: BeautifulSoup):
-        returnObj: Proposal = Proposal(Proposal.getTitle(soup), "uppskot")
-        a: BeautifulSoup = soup.find('table', class_="table")
-        for tr in a.find_all("tr"):
+    def createProposalObj(soup: BeautifulSoup, title):
+        returnObj: Proposal = Proposal(title, "uppskot")
+        table: BeautifulSoup = soup.find('table', class_="table")
+        for tr in table.find_all("tr"):
             th: str = (tr.find("th")).get_text()
             if "Slag" in th:
                 returnObj.type = (tr.find("td")).get_text()

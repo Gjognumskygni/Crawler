@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 from typing import List
 
 class Vote():
-    def __init__(self, title: BeautifulSoup, process: str, present: int, yes: int, no: int, blank: int, yes_list: List[str], no_list: List[str], blank_list: List[str]):
+    def __init__(self, title: str, process: str, present: int, yes: int, no: int, blank: int, yes_list: List[str], no_list: List[str], blank_list: List[str]):
         self.title = title
         self.process = process
         self.present = present
@@ -16,8 +16,11 @@ class Vote():
     @staticmethod
     def createVoteObj(soup: BeautifulSoup, process: str):
         b = soup.find('b')
+        span = soup.find('span')
         if b is None:
             title = ""
+        elif span is not None:
+            title: str = span.get_text()
         else:
             title: str = b.get_text()
         yes_list: List[str] = []
