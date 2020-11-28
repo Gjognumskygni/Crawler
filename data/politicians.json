@@ -1,0 +1,98 @@
+[
+    {
+        "name": "Beinir Johannesen",
+        "guid": "b7d65614-8149-412d-9cbc-aa7648491705",
+        "timespans": [
+            {
+                "party": "A1359ff0-612e-45c1-a961-57ed4eafba7a",
+                "role": "Unassigned",
+                "start": "2019-08-31",
+                "end": null
+            }
+        ]
+    },
+    {
+        "name": "Jacob Vestergaard",
+        "guid": "c9c7fdd6-7ac3-47ca-808e-0508c067e5ff",
+        "timespans": [
+            {
+                "party": "A1359ff0-612e-45c1-a961-57ed4eafba7a",
+                "role": "Unassigned",
+                "start": "2019-08-31",
+                "end": null
+            }
+        ]
+    },
+    {
+        "name": "Jørgen Niclasen",
+        "guid": "9972c5fb-3434-4a57-8462-3f181d665333",
+        "timespans": [
+            {
+                "party": "A1359ff0-612e-45c1-a961-57ed4eafba7a",
+                "role": "Minister",
+                "start": "2019-08-31",
+                "end": null
+            }
+        ]
+    },
+    {
+        "name": "Jógvan á Lakjuni",
+        "guid": "e94fee0d-4eef-4a7f-ae34-0b16d5fdb77e",
+        "timespans": [
+            {
+                "party": "A1359ff0-612e-45c1-a961-57ed4eafba7a",
+                "role": "Unassigned",
+                "start": "2019-08-31",
+                "end": null
+            }
+        ]
+    },
+    {
+        "name": "Christian Andreasen",
+        "guid": "56c3a755-c5da-497e-8857-73e037edf963",
+        "timespans": [
+            {
+                "party": "A1359ff0-612e-45c1-a961-57ed4eafba7a",
+                "role": "Unassigned",
+                "start": "2019-08-31",
+                "end": null
+            }
+        ]
+    },
+    {
+        "name": "Jákup Mikkelsen",
+        "guid": "903a4049-68f0-432a-af63-6be99242a92c",
+        "timespans": [
+            {
+                "party": "A1359ff0-612e-45c1-a961-57ed4eafba7a",
+                "role": "Unassigned",
+                "start": "2019-08-31",
+                "end": null
+            }
+        ]
+    },
+    {
+        "name": "Uni Rasmussen",
+        "guid": "b88aebc8-7501-4dc8-8ef8-f6bc06776e62",
+        "timespans": [
+            {
+                "party": "A1359ff0-612e-45c1-a961-57ed4eafba7a",
+                "role": "Unassigned",
+                "start": "2019-08-31",
+                "end": null
+            }
+        ]
+    },
+    {
+        "name": "Elsebeth Mercedis Gunnleygsdóttur",
+        "guid": "fd22700d-f3c6-4499-9bfa-0b57d2edc5da",
+        "timespans": [
+            {
+                "party": "A1359ff0-612e-45c1-a961-57ed4eafba7a",
+                "role": "Unassigned",
+                "start": "2019-08-31",
+                "end": null
+            }
+        ]
+    }
+]

@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Fólkaflokkurin",
+        "letter": "A",
+        "guid": "A1359ff0-612e-45c1-a961-57ed4eafba7a"
+    },
+    {
+        "name": "Sambandsflokkurin",
+        "letter": "B",
+        "guid": "B53e6716-c18d-4847-9ada-ef2634aa3085"
+    },
+    {
+        "name": "Javnaðarflokkurin",
+        "letter": "C",
+        "guid": "C080f101-d407-41e2-8a7b-a2e184fae7af"
+    },
+    {
+        "name": "Sjálvstýri",
+        "letter": "D",
+        "guid": "Dc07dbdd-49ee-4c83-b441-12d114672c3a"
+    },
+    {
+        "name": "Tjóðveldi",
+        "letter": "E",
+        "guid": "E92bf5dd-625c-48ad-907c-ce7bda9885de"
+    },
+    {
+        "name": "Framsókn",
+        "letter": "F",
+        "guid": "Fb139a8a-85bc-4b3b-811d-d5b85adb62cc"
+    },
+    {
+        "name": "Miðflokkurin",
+        "letter": "H",
+        "guid": "Hb4b2e7d-e4b3-48fb-89f5-321ef755e11a"
+    },
+    {
+        "name": "Framtakið fyri rættinum at velja kannabis",
+        "letter": "K",
+        "guid": "K7a852d2-3074-4741-ab90-d6524c4149f8"
+    },
+    {
+        "name": "Føroyaflokkurin",
+        "letter": "L",
+        "guid": "L99fa87d-c6e0-4c20-8a5d-8278ee4f16b6"
+    }
+]

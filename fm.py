@@ -2,6 +2,9 @@ from typing import List, Dict
 import json
 from proposal import Proposal
 from vote import Vote
+from party import Party
+from politician import Politician
+from timespan import Timespan, Role
 
 def _voteEncoder(voteObj: Vote):
     newprocess = voteObj.process.strip("\n")
@@ -91,8 +94,64 @@ def _proposalDecoder(proposalDict):
 
 def ProposalFromFile():
     proposals: List[Proposal] = []
-    with open('2014-2019data.json') as json_file:
+    with open('data/2014-2019data.json') as json_file:
         proposalList = json.load(json_file)
         for proposalDict in proposalList:
             proposals.append(_proposalDecoder(proposalDict))
     return proposals
+
+def _partyDecoder(partyDict):
+    returnObj: Party = Party("","","")
+    for key, value in partyDict.items(): 
+        if key == "name":
+            returnObj.name = value
+        elif key == "letter":
+            returnObj.letter = value
+        elif key == "guid":
+            returnObj.guid = value
+    return returnObj
+
+def PartiesFromFile():
+    parties: Dict[str, Party] = {}
+    with open('data/parties.json') as json_file:
+        partyList = json.load(json_file)
+        for partyDict in partyList:
+            party = _partyDecoder(partyDict)
+            parties[party.guid] = party
+    return parties
+
+def _politicianDecoder(politicianDict, partiesDict):
+    returnObj: Politician = Politician("","",[])
+    for key, value in politicianDict.items(): 
+        if key == "name":
+            returnObj.name = value
+        elif key == "guid":
+            returnObj.guid = value
+        elif key == "timespans":
+            for timespan in value:
+                returnObj.timespans.append(_timespanDecoder(timespan, partiesDict))
+    return returnObj
+
+def _timespanDecoder(timespanDict, partiesDict):
+    returnObj: Timespan = Timespan("","","","")
+    for key, value in timespanDict.items(): 
+        if key == "party":
+            party = partiesDict[value]
+            returnObj.party = party
+        elif key == "role":
+            returnObj.role = Role[value]
+        elif key == "start":
+            returnObj.start = value
+        elif key == "end":
+            returnObj.end = value
+    return returnObj
+
+def PoliticiansFromFile():
+    partiesDict: Dict[str, Party] = PartiesFromFile()
+    politicians: List[Politician] = []
+    with open('data/politicians.json') as json_file:
+        politicianList = json.load(json_file)
+        for politicianDict in politicianList:
+            politicians.append(_politicianDecoder(politicianDict, partiesDict))
+    return politicians
+
