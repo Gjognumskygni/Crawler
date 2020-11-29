@@ -102,5 +102,330 @@
                 "end": null
             }
         ]
+    },
+    {
+        "name": "Bárður á Steig Nielsen",
+        "guid": "a9fc73a6-a6d4-4957-844a-7c20a3d38f04",
+        "timespans": [
+            {
+                "party": "B53e6716-c18d-4847-9ada-ef2634aa3085",
+                "role": "Unassigned",
+                "substituteFor": null,
+                "start": "2019-08-31",
+                "end": null
+            }
+        ]
+    },
+    {
+        "name": "Magnus Rasmussen",
+        "guid": "34d6f20a-2169-4f0a-b559-4404e13d2869",
+        "timespans": [
+            {
+                "party": "B53e6716-c18d-4847-9ada-ef2634aa3085",
+                "role": "Unassigned",
+                "substituteFor": null,
+                "start": "2019-08-31",
+                "end": null
+            }
+        ]
+    },
+    {
+        "name": "Helgi Abrahamsen",
+        "guid": "56b31f14-a1af-4e21-a0d0-4eeebc54400e",
+        "timespans": [
+            {
+                "party": "B53e6716-c18d-4847-9ada-ef2634aa3085",
+                "role": "Unassigned",
+                "substituteFor": null,
+                "start": "2019-08-31",
+                "end": null
+            }
+        ]
+    },
+    {
+        "name": "Kaj Leo Holm Johannesen",
+        "guid": "8687d9bb-6fa2-4935-801b-03533928051b",
+        "timespans": [
+            {
+                "party": "B53e6716-c18d-4847-9ada-ef2634aa3085",
+                "role": "Unassigned",
+                "substituteFor": null,
+                "start": "2019-08-31",
+                "end": null
+            }
+        ]
+    },
+    {
+        "name": "Frimodt Rasmussen",
+        "guid": "4272bd3a-c8a2-4e53-b280-633ec084e07d",
+        "timespans": [
+            {
+                "party": "B53e6716-c18d-4847-9ada-ef2634aa3085",
+                "role": "Unassigned",
+                "substituteFor": null,
+                "start": "2019-08-31",
+                "end": null
+            }
+        ]
+    },
+    {
+        "name": "Rósa Samuelsen",
+        "guid": "c2376ea1-df08-4d75-b671-d5ff160b7f38",
+        "timespans": [
+            {
+                "party": "B53e6716-c18d-4847-9ada-ef2634aa3085",
+                "role": "Unassigned",
+                "substituteFor": null,
+                "start": "2019-08-31",
+                "end": null
+            }
+        ]
+    },
+    {
+        "name": "Johan Dahl",
+        "guid": "3320b965-1dfb-4b47-9f77-fac808c40f18",
+        "timespans": [
+            {
+                "party": "B53e6716-c18d-4847-9ada-ef2634aa3085",
+                "role": "Unassigned",
+                "substituteFor": null,
+                "start": "2019-08-31",
+                "end": null
+            }
+        ]
+    },
+    {
+        "name": "Aksel V. Johannesen",
+        "guid": "32f142a0-1a0e-47e7-b4e1-65e9e176d7bf",
+        "timespans": [
+            {
+                "party": "C080f101-d407-41e2-8a7b-a2e184fae7af",
+                "role": "Unassigned",
+                "substituteFor": null,
+                "start": "2019-08-31",
+                "end": null
+            }
+        ]
+    },
+    {
+        "name": "Ingilín Didriksen Strøm",
+        "guid": "f52699a6-719a-426e-b64a-1a4deb161844",
+        "timespans": [
+            {
+                "party": "C080f101-d407-41e2-8a7b-a2e184fae7af",
+                "role": "Unassigned",
+                "substituteFor": null,
+                "start": "2019-08-31",
+                "end": null
+            }
+        ]
+    },
+    {
+        "name": "Henrik Old",
+        "guid": "5eeb57b3-4149-4d77-b1da-18c9b1377fa0",
+        "timespans": [
+            {
+                "party": "C080f101-d407-41e2-8a7b-a2e184fae7af",
+                "role": "Unassigned",
+                "substituteFor": null,
+                "start": "2019-08-31",
+                "end": null
+            }
+        ]
+    },
+    {
+        "name": "Heðin Mortensen",
+        "guid": "60e131e7-b0dc-4f16-a656-72d913f70944",
+        "timespans": [
+            {
+                "party": "C080f101-d407-41e2-8a7b-a2e184fae7af",
+                "role": "Unassigned",
+                "substituteFor": null,
+                "start": "2019-08-31",
+                "end": null
+            }
+        ]
+    },
+    {
+        "name": "Djóni Nolsøe Joensen",
+        "guid": "1afde0e6-489b-4f9e-bf44-b6af26414548",
+        "timespans": [
+            {
+                "party": "C080f101-d407-41e2-8a7b-a2e184fae7af",
+                "role": "Unassigned",
+                "substituteFor": null,
+                "start": "2019-08-31",
+                "end": null
+            }
+        ]
+    },
+    {
+        "name": "Jóhannis Joensen",
+        "guid": "ff05b9f2-8fe0-4d8f-8c05-ead139ce95aa",
+        "timespans": [
+            {
+                "party": "C080f101-d407-41e2-8a7b-a2e184fae7af",
+                "role": "Unassigned",
+                "substituteFor": null,
+                "start": "2019-08-31",
+                "end": null
+            }
+        ]
+    },
+    {
+        "name": "Bjarni Hammer",
+        "guid": "d36bb3cd-a8fc-4823-8352-faeb5b27dff5",
+        "timespans": [
+            {
+                "party": "C080f101-d407-41e2-8a7b-a2e184fae7af",
+                "role": "Unassigned",
+                "substituteFor": null,
+                "start": "2019-08-31",
+                "end": null
+            }
+        ]
+    },
+    {
+        "name": "Kristin Michelsen",
+        "guid": "cc1d1b52-a21c-4ec4-9ca0-09e0cbca2642",
+        "timespans": [
+            {
+                "party": "Dc07dbdd-49ee-4c83-b441-12d114672c3a",
+                "role": "Unassigned",
+                "substituteFor": null,
+                "start": "2019-08-31",
+                "end": null
+            }
+        ]
+    },
+    {
+        "name": "Høgni Hoydal",
+        "guid": "00c32392-a156-494f-bb9d-8fcb89a737ee",
+        "timespans": [
+            {
+                "party": "E92bf5dd-625c-48ad-907c-ce7bda9885de",
+                "role": "Unassigned",
+                "substituteFor": null,
+                "start": "2019-08-31",
+                "end": null
+            }
+        ]
+    },
+    {
+        "name": "Sirið Stenberg",
+        "guid": "96f94923-db70-4dd1-af8e-03ee301ce508",
+        "timespans": [
+            {
+                "party": "E92bf5dd-625c-48ad-907c-ce7bda9885de",
+                "role": "Unassigned",
+                "substituteFor": null,
+                "start": "2019-08-31",
+                "end": null
+            }
+        ]
+    },
+    {
+        "name": "Bjørt Samuelsen",
+        "guid": "b0f94b9a-97aa-4a31-b5f6-acdb970769a1",
+        "timespans": [
+            {
+                "party": "E92bf5dd-625c-48ad-907c-ce7bda9885de",
+                "role": "Unassigned",
+                "substituteFor": null,
+                "start": "2019-08-31",
+                "end": null
+            }
+        ]
+    },
+    {
+        "name": "Kristina Háfoss",
+        "guid": "f954e398-b8bc-47d5-8b0b-01e7e53eacb6",
+        "timespans": [
+            {
+                "party": "E92bf5dd-625c-48ad-907c-ce7bda9885de",
+                "role": "Unassigned",
+                "substituteFor": null,
+                "start": "2019-08-31",
+                "end": null
+            }
+        ]
+    },
+    {
+        "name": "Beinta Løwe",
+        "guid": "5446ab50-320a-4305-bb7e-eff6caf140b7",
+        "timespans": [
+            {
+                "party": "E92bf5dd-625c-48ad-907c-ce7bda9885de",
+                "role": "Unassigned",
+                "substituteFor": null,
+                "start": "2019-08-31",
+                "end": null
+            }
+        ]
+    },
+    {
+        "name": "Hervør Pálsdóttir",
+        "guid": "36ed1e27-b6c6-4576-b4da-25a3ee232f39",
+        "timespans": [
+            {
+                "party": "E92bf5dd-625c-48ad-907c-ce7bda9885de",
+                "role": "Unassigned",
+                "substituteFor": null,
+                "start": "2019-08-31",
+                "end": null
+            }
+        ]
+    },
+    {
+        "name": "Bjarni K. Petersen",
+        "guid": "874356a8-dbf2-4315-a6f8-c170c00812ee",
+        "timespans": [
+            {
+                "party": "Fb139a8a-85bc-4b3b-811d-d5b85adb62cc",
+                "role": "Unassigned",
+                "substituteFor": null,
+                "start": "2019-08-31",
+                "end": null
+            }
+        ]
+    },
+    {
+        "name": "Poul Michelsen",
+        "guid": "001d000f-0b2c-411f-a6fa-bf1de71477e8",
+        "timespans": [
+            {
+                "party": "Fb139a8a-85bc-4b3b-811d-d5b85adb62cc",
+                "role": "Unassigned",
+                "substituteFor": null,
+                "start": "2019-08-31",
+                "end": null
+            }
+        ]
+    },
+    {
+        "name": "Jenis av Rana",
+        "guid": "c9518c4e-7ef3-48a6-a362-60af397aaabd",
+        "timespans": [
+            {
+                "party": "Hb4b2e7d-e4b3-48fb-89f5-321ef755e11a",
+                "role": "Unassigned",
+                "substituteFor": null,
+                "start": "2019-08-31",
+                "end": null
+            }
+        ]
+    },
+    {
+        "name": "Bill Justinussen",
+        "guid": "7cef7309-6a01-4a54-83b2-5c742fb6e14f",
+        "timespans": [
+            {
+                "party": "Hb4b2e7d-e4b3-48fb-89f5-321ef755e11a",
+                "role": "Unassigned",
+                "substituteFor": null,
+                "start": "2019-08-31",
+                "end": null
+            }
+        ]
     }
 ]
