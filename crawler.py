@@ -2,7 +2,7 @@ from proposal import Proposal
 from link import Link
 from bs4 import BeautifulSoup
 from vote import Vote
-from fm import ProposalToFile, linksToFile, ProposalFromFile, PartiesFromFile, PoliticiansFromFile
+from fm import *
 from url import makeRequest
 from typing import List
 from print import *
@@ -20,10 +20,17 @@ def crawlProposalLinks() -> List[Link]:
 def crawl():
     proposals = ProposalFromFile()
     party = PartiesFromFile()
-    politicians = PoliticiansFromFile()
+    politicians = PoliticiansIncludingTimespansFromFile()
 
-    print(party)
-    print(politicians)
+    #print(party)
+    print("Parties")
+    for i in party:
+        printParty(i)
+
+    #print(politicians)
+    print("Politicians")
+    for i in politicians:
+        printPolitician(i)
 
 
     # print(proposals)
