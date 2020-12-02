@@ -1,16 +1,20 @@
 from bs4 import BeautifulSoup
 from typing import List
 from vote import Vote
-from url import makeRequest
+from url import Url
+from link import Link
 import requests
 import time
 
 class Proposal():
-    def __init__(self, title: str, type: str):
+    def __init__(self, number: str, title: str, type: str, link: Link):
+        self.number = number
         self.title = title
         self.type = type
+        self.link = link
         self.proposers: List[str] = []
         self.votes: List[Vote] = []
+        self.tags: List[str] = []
 
     @staticmethod
     def getVotes(soup: BeautifulSoup, url: str) -> Vote:
@@ -20,28 +24,30 @@ class Proposal():
             th: str = (tr.find("th")).get_text()
             if "Skjal" in th:
                 a: BeautifulSoup = tr.find('a', href=True)
-                newSoup: BeautifulSoup = makeRequest(a['data-url'])
+                newSoup: BeautifulSoup = Url.makeRequest(a['data-url'])
             elif "Atkvøða greidd í" in th:
                 process: str = (tr.find("td")).get_text()
         return Vote.createVoteObj(newSoup, process)
     
     @staticmethod
-    def createProposalObj(soup: BeautifulSoup, title):
-        returnObj: Proposal = Proposal(title, "uppskot")
+    def populateProposalObj(soup: BeautifulSoup, proposal):
+        proposal.number = proposal.link.number
+        proposal.title = proposal.link.title
         table: BeautifulSoup = soup.find('table', class_="table")
         for tr in table.find_all("tr"):
             th: str = (tr.find("th")).get_text()
             if "Slag" in th:
-                returnObj.type: str = (tr.find("td")).get_text()
+                proposal.type: str = (tr.find("td")).get_text()
             elif "Uppskotssetari" in th:
                 for div in tr.find_all('div'):
-                    returnObj.proposers.append(div.get_text())
+                    proposal.proposers.append(div.get_text())
             elif "Atkvøðugreiðslur" in th:
                 for a in tr.find_all('a', href=True):
                     url: str = "https://www.logting.fo" + a['href']
-                    newSoup: BeautifulSoup = makeRequest(url)
+                    proposal.link.urls.append(Url.createURLObj(url,"votePage"))
+                    newSoup: BeautifulSoup = Url.makeRequest(url)
                     for link in newSoup.find_all('div', class_='macroContainer'):
                         if 'GetVoteDetail' in link['data-url']:
                             voteUrl: str = "https://www.logting.fo" + link['data-url']
-                            returnObj.votes.append(Proposal.getVotes(makeRequest(voteUrl), voteUrl))
-        return returnObj
+                            proposal.votes.append(Proposal.getVotes(Url.makeRequest(voteUrl), voteUrl))
+        return proposal

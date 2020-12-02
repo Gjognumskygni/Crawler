@@ -2,31 +2,34 @@ from proposal import Proposal
 from link import Link
 from bs4 import BeautifulSoup
 from vote import Vote
-from fm import ProposalToFile, linksToFile, ProposalFromFile
-from url import makeRequest
+from fm import ProposalToFile, ProposalFromFile
+from url import Url
 from typing import List
 
-def crawlProposalLinks() -> List[Link]:
-    url: str = "https://www.logting.fo/umbraco/Surface/MacroSurface/GetCasesByYearAndType?SelectedType=1&SelectedYear=2018&X-Requested-With=XMLHttpRequest&_=1606033985196"
-    links: List[Link] = []
-    soup = makeRequest(url)
+def crawlProposalLinks() -> List[Proposal]:
+    url: str = "https://www.logting.fo/umbraco/Surface/MacroSurface/GetCasesByYearAndType?SelectedType=1&SelectedYear=2019&X-Requested-With=XMLHttpRequest&_=1606593520654"
+    proposals: List[Proposal] = []
+    soup = Url.makeRequest(url)
     tbody: BeautifulSoup = soup.find('tbody')
+    i = 0
     for tr in tbody.find_all("tr"):
-        td = tr.find_all("td")
-        links.append(Link.createLinkObj(td))
-    return links
+        if i < 1:
+            td = tr.find_all("td")
+            link = Link("","","","")
+            proposals.append(Proposal("", "", "", Link.populateLinkObj(td,link)))
+            i = i+1
+    return proposals
 
 def crawl():
-    proposal_list: List[Proposal] = []
-    links: List[Link] = crawlProposalLinks()
-    length = len(links)
+    Proposals: List[Proposal] = crawlProposalLinks()
+    length = len(Proposals)
     index = 1
-    for url in links:
+    for proposal in Proposals:
         print("----- crawling new url -----")
         print(index)
         print(length)
-        print(url.number)
-        soup = makeRequest(url.proposalUrl)
-        proposal_list.append(Proposal.createProposalObj(soup, url.title))
+        print(proposal.link.number)
+        soup = Url.makeRequest(proposal.link.proposalUrl)
+        proposal = Proposal.populateProposalObj(soup, proposal)
         index += 1
-    ProposalToFile(proposal_list)
+    ProposalToFile(Proposals)
