@@ -11,10 +11,11 @@ class Vote():
         self.blank = blank
         self.yes_list = yes_list
         self.no_list = no_list
-        self.blank_list = blank_list 
+        self.blank_list = blank_list
+        self.absent_list: List[str] = []
 
     @staticmethod
-    def createVoteObj(soup: BeautifulSoup, process: str):
+    def createVoteObj(soup: BeautifulSoup, process: str, votesList):
         b: BeautifulSoup = soup.find('b')
         span: BeautifulSoup = soup.find('span')
         if b is None:
@@ -58,4 +59,4 @@ class Vote():
                         blank_list.append(td.get_text().split('. ')[1])
                     else:
                         blank_list.append(td.get_text().split('.')[1])
-        return Vote(title, process, (len(yes_list) + len(no_list) + len(blank_list)), len(yes_list), len(no_list), len(blank_list), yes_list, no_list, blank_list)
+        return Vote(title, process, (len(yes_list) + len(no_list) + len(blank_list)), votesList[0], votesList[2], votesList[1], yes_list, no_list, blank_list)

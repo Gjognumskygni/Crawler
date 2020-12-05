@@ -17,7 +17,7 @@ class Proposal():
         self.tags: List[str] = []
 
     @staticmethod
-    def getVotes(soup: BeautifulSoup, url: str) -> Vote:
+    def getVotes(soup: BeautifulSoup) -> Vote:
         newSoup: BeautifulSoup = soup
         process: str = ""
         for tr in soup.find_all("tr"):
@@ -27,7 +27,10 @@ class Proposal():
                 newSoup: BeautifulSoup = Url.makeRequest(a['data-url'])
             elif "Atkvøða greidd í" in th:
                 process: str = (tr.find("td")).get_text()
-        return Vote.createVoteObj(newSoup, process)
+            elif "Úrslit" in th:
+                votestring: str = ((tr.find("div")).get_text()).replace('(', ' ').replace(')', ' ')
+                votesList: List[int] = [int(s) for s in votestring.split() if s.isdigit()]
+        return Vote.createVoteObj(newSoup, process, votesList)
     
     @staticmethod
     def populateProposalObj(soup: BeautifulSoup, proposal):
@@ -48,6 +51,11 @@ class Proposal():
                     newSoup: BeautifulSoup = Url.makeRequest(url)
                     for link in newSoup.find_all('div', class_='macroContainer'):
                         if 'GetVoteDetail' in link['data-url']:
-                            voteUrl: str = "https://www.logting.fo" + link['data-url']
-                            proposal.votes.append(Proposal.getVotes(Url.makeRequest(voteUrl), voteUrl))
+                            votesoup = Url.makeRequest("https://www.logting.fo" + link['data-url'])
+                            a: BeautifulSoup = votesoup.find('a', href=True)
+                            if "pdf" in a['data-title']:
+                                proposal.link.urls.append(Url.createURLObj(a['data-url'],"votePDF"))
+                            elif "html" in a['data-title']:
+                                proposal.link.urls.append(Url.createURLObj(a['data-url'],"voteHTML"))
+                            proposal.votes.append(Proposal.getVotes(votesoup))
         return proposal

@@ -26,7 +26,7 @@ class Url():
     @staticmethod
     def makeRequest(url: str):
         print(url)
-        time.sleep(2)
+        time.sleep(1)
         result = requests.get(url)
         src = result.content
         return BeautifulSoup(src, 'lxml')

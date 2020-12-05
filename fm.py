@@ -5,14 +5,25 @@ from vote import Vote
 from link import Link
 from url import Url
 
-def _urlEncoder(urlObj):
-    return {"scheme": urlObj.scheme, "netloc": urlObj.netloc, "path": urlObj.path, "params": urlObj.params, "query": urlObj.query, "fragment": urlObj.fragment, "iscrawled": urlObj.iscrawled, "urlType": urlObj.urlType.name}
+def _urlEncoder(urlObj: Url):
+    return {"scheme": urlObj.scheme,
+            "netloc": urlObj.netloc,
+            "path": urlObj.path,
+            "params": urlObj.params,
+            "query": urlObj.query,
+            "fragment": urlObj.fragment,
+            "iscrawled": urlObj.iscrawled,
+            "urlType": urlObj.urlType.value}
 
-def _linkEncoder(linkObj):
+def _linkEncoder(linkObj: Link):
     urlList = []
     for url in linkObj.urls:
         urlList.append(_urlEncoder(url)) 
-    return {"number": linkObj.number, "title": linkObj.title, "committeeName": linkObj.committeeName, "status": linkObj.status, "urls": urlList}
+    return {"number": linkObj.number,
+            "title": linkObj.title,
+            "committeeName": linkObj.committeeName,
+            "status": linkObj.status,
+            "urls": urlList}
 
 def _voteEncoder(voteObj: Vote):
     newprocess = voteObj.process.strip("\n")
@@ -24,7 +35,8 @@ def _voteEncoder(voteObj: Vote):
             "blank": voteObj.blank,
             "yes_list": voteObj.yes_list,
             "no_list": voteObj.no_list,
-            "blank_list": voteObj.blank_list}
+            "blank_list": voteObj.blank_list,
+            "absent_list": voteObj.absent_list}
 
 def _proposalEncoder(proposalObj: Proposal):
     striptTitile = proposalObj.type.strip("\r\n                                                ")
@@ -37,7 +49,13 @@ def _proposalEncoder(proposalObj: Proposal):
         newProposers.append(newProposer)
     for vote in proposalObj.votes:
         newVote.append(_voteEncoder(vote))
-    return {"number": proposalObj.number, "title": proposalObj.title, "type": striptTitile, "proposers": newProposers, "link": link, "votes": newVote}
+    return {"number": proposalObj.number,
+            "title": proposalObj.title,
+            "type": striptTitile,
+            "proposers": newProposers,
+            "tags": proposalObj.tags,
+            "link": link,
+            "votes": newVote}
 
 def ProposalToFile(objList):
     dataList = []
@@ -73,6 +91,10 @@ def _voteDecoder(voteDict):
             if len(value) != 0:
                 for voter in value:
                     returnObj.blank_list.append(voter)
+        elif key == "absent_list":
+            if len(value) != 0:
+                for absent in value:
+                    returnObj.blank_list.append(absent)
     return returnObj
 
 def _urlDecoder(urlDict):
@@ -114,7 +136,9 @@ def _linkDecoder(linkDict):
 
 def _proposalDecoder(proposalDict):
     returnObj: Proposal = Proposal("","","", Link("","","",""))
-    for key, value in proposalDict.items(): 
+    for key, value in proposalDict.items():
+        if key == "number":
+            returnObj.number = value
         if key == "title":
             returnObj.title = value
         elif key == "type":
