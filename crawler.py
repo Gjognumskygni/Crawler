@@ -6,8 +6,6 @@ from fm import ProposalToFile, ProposalFromFile
 from url import Url
 from typing import List
 
-
-
 def crawlProposalLinks() -> List[Proposal]:
     urls = ["https://www.logting.fo/umbraco/Surface/MacroSurface/GetCasesByYearAndType?SelectedType=1&SelectedYear=2019&X-Requested-With=XMLHttpRequest&_=1607020162247",
     "https://www.logting.fo/umbraco/Surface/MacroSurface/GetCasesByYearAndType?SelectedType=1&SelectedYear=2018&X-Requested-With=XMLHttpRequest&_=1607020162246",
@@ -24,7 +22,13 @@ def crawlProposalLinks() -> List[Proposal]:
     "https://www.logting.fo/umbraco/Surface/MacroSurface/GetCasesByYearAndType?SelectedType=1&SelectedYear=2007&X-Requested-With=XMLHttpRequest&_=1607020162235",
     "https://www.logting.fo/umbraco/Surface/MacroSurface/GetCasesByYearAndType?SelectedType=1&SelectedYear=2006&X-Requested-With=XMLHttpRequest&_=1607020162234",
     "https://www.logting.fo/umbraco/Surface/MacroSurface/GetCasesByYearAndType?SelectedType=1&SelectedYear=2005&X-Requested-With=XMLHttpRequest&_=1607020162233",
-    "https://www.logting.fo/umbraco/Surface/MacroSurface/GetCasesByYearAndType?SelectedType=1&SelectedYear=2004&X-Requested-With=XMLHttpRequest&_=1607020162232"]
+    "https://www.logting.fo/umbraco/Surface/MacroSurface/GetCasesByYearAndType?SelectedType=1&SelectedYear=2004&X-Requested-With=XMLHttpRequest&_=1607020162232",
+    "https://www.logting.fo/umbraco/Surface/MacroSurface/GetCasesByYearAndType?SelectedType=1&SelectedYear=2003&X-Requested-With=XMLHttpRequest&_=1607250345685",
+    "https://www.logting.fo/umbraco/Surface/MacroSurface/GetCasesByYearAndType?SelectedType=1&SelectedYear=2002&X-Requested-With=XMLHttpRequest&_=1607250345686",
+    "https://www.logting.fo/umbraco/Surface/MacroSurface/GetCasesByYearAndType?SelectedType=1&SelectedYear=2001&X-Requested-With=XMLHttpRequest&_=1607250345687",
+    "https://www.logting.fo/umbraco/Surface/MacroSurface/GetCasesByYearAndType?SelectedType=1&SelectedYear=2000&X-Requested-With=XMLHttpRequest&_=1607250345688",
+    "https://www.logting.fo/umbraco/Surface/MacroSurface/GetCasesByYearAndType?SelectedType=1&SelectedYear=1999&X-Requested-With=XMLHttpRequest&_=1607250345689",
+    "https://www.logting.fo/umbraco/Surface/MacroSurface/GetCasesByYearAndType?SelectedType=1&SelectedYear=1998&X-Requested-With=XMLHttpRequest&_=1607250345690"]
     proposals: List[Proposal] = []
     for url in urls:
         soup = Url.makeRequest(url)
