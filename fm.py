@@ -3,7 +3,7 @@ import json
 from proposal import Proposal
 from vote import Vote
 from link import Link
-from url import Url
+from url import Url, URLType
 
 def _urlEncoder(urlObj: Url):
     return {"scheme": urlObj.scheme,
@@ -65,100 +65,42 @@ def ProposalToFile(objList):
         json.dump(dataList, f, ensure_ascii=False, indent=4)
 
 def _voteDecoder(voteDict):
-    returnObj: Vote = Vote("", "", 0, 0, 0, 0, [], [], [])
-    for key, value in voteDict.items():
-        if key == "title":
-            returnObj.title = value
-        elif key == "process":
-            returnObj.process = value
-        elif key == "present":
-            returnObj.present = int(value)
-        elif key == "yes":
-            returnObj.yes = int(value)
-        elif key == "no":
-            returnObj.no = int(value)
-        elif key == "blank":
-            returnObj.blank = int(value)
-        elif key == "yes_list":
-            if len(value) != 0:
-                for voter in value:
-                    returnObj.yes_list.append(voter)
-        elif key == "no_list":
-            if len(value) != 0:
-                for voter in value:
-                    returnObj.no_list.append(voter)
-        elif key == "blank_list":
-            if len(value) != 0:
-                for voter in value:
-                    returnObj.blank_list.append(voter)
-        elif key == "absent_list":
-            if len(value) != 0:
-                for absent in value:
-                    returnObj.blank_list.append(absent)
+    yes_list: List[str] = []
+    no_list: List[str] = []
+    blank_list: List[str] = []
+    for voter in voteDict["yes_list"]:
+        yes_list.append(voter)
+    for voter in voteDict["no_list"]:
+        no_list.append(voter)
+    for voter in voteDict["blank_list"]:
+        blank_list.append(voter)
+    returnObj: Vote = Vote(voteDict["title"], voteDict["process"], voteDict["present"], voteDict["yes"], voteDict["no"], voteDict["blank"], yes_list, no_list, blank_list)
+    for absent in voteDict["absent_list"]:
+        returnObj.absent_list.append(absent)
     return returnObj
 
 def _urlDecoder(urlDict):
-    returnLink = Url("","","","","","", False,"")
-    for key, value in urlDict.items():
-        if key == "scheme":
-            returnLink.scheme = value
-        elif key == "netloc":
-            returnLink.netloc = value
-        elif key == "path":
-            returnLink.path = value
-        elif key == "params":
-            returnLink.params = value
-        elif key == "query":
-            returnLink.query = value
-        elif key == "fragment":
-            returnLink.fragment = value
-        elif key == "iscrawled":
-            returnLink.iscrawled = value
-        else:
-            returnLink.urlType = value
-    return returnLink
+    return Url(urlDict["scheme"],urlDict["netloc"],urlDict["path"],urlDict["params"], urlDict["query"], urlDict["fragment"], urlDict["iscrawled"], urlDict["urlType"])
 
 def _linkDecoder(linkDict):
-    returnLink = Link("","","","")
-    for key, value in linkDict.items():
-        if key == "number":
-            returnLink.number = value
-        elif key == "title":
-            returnLink.title = value
-        elif key == "committeeName":
-            returnLink.committeeName = value
-        elif key == "status":
-            returnLink.status
-        else:
-            for url in value:
-                returnLink.urls.append(_urlDecoder(url))
+    returnLink = Link(linkDict["number"], linkDict["title"], linkDict["committeeName"], linkDict["status"])
+    for url in linkDict["urls"]:
+        returnLink.urls.append(_urlDecoder(url))
     return returnLink
 
 def _proposalDecoder(proposalDict):
-    returnObj: Proposal = Proposal("","","", Link("","","",""))
-    for key, value in proposalDict.items():
-        if key == "number":
-            returnObj.number = value
-        if key == "title":
-            returnObj.title = value
-        elif key == "type":
-            returnObj.type = value
-        elif key == "link":
-            returnObj.link = _linkDecoder(value)
-        elif key == "proposers":
-            for proposer in value:
-                returnObj.proposers.append(proposer)
-        elif key == "votes":
-            if len(value) != 0:
-                for vote in value:
-                    returnObj.votes.append(_voteDecoder(vote))
-        else:
-            returnObj.tags = value
+    returnObj: Proposal = Proposal(proposalDict["number"], proposalDict["title"], proposalDict["type"], _linkDecoder(proposalDict["link"]))
+    for proposer in proposalDict["proposers"]:
+        returnObj.proposers.append(proposer)
+    for vote in proposalDict["votes"]:
+        returnObj.votes.append(_voteDecoder(vote))
+    for tag in proposalDict["tags"]:
+        returnObj.tags.append(tag)
     return returnObj
 
 def ProposalFromFile():
     proposals: List[Proposal] = []
-    with open('data.json') as json_file:
+    with open('1998-2019data.json') as json_file:
         proposalList = json.load(json_file)
         for proposalDict in proposalList:
             proposals.append(_proposalDecoder(proposalDict))
