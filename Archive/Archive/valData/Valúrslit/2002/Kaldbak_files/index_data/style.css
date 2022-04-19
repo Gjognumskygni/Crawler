@@ -1,0 +1,240 @@
+td {
+	vertical-align:top;
+	margin:0px;
+	padding:2px;
+}
+table {
+	border-collapse:collapse;
+}
+pre {
+	text-align:center;
+	font-size:large;
+	font-weight:bold;
+}
+.Font12PtArialBold 
+{  
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	font-style: normal; 
+	line-height: normal; 
+	font-weight: bold; 
+	font-variant: normal; 
+	text-transform: none;
+}
+.SamantelKol1 
+{  
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 14px; 
+	font-style: normal; 
+	line-height: normal; 
+	font-weight: bold; 
+	font-variant: normal; 
+	text-transform: none;
+	text-align: left;
+}
+.SamantelKol2 
+{  
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 14px; 
+	font-style: normal; 
+	line-height: normal; 
+	font-weight: bold; 
+	font-variant: normal; 
+	text-transform: none;
+	text-align: right;
+}
+.SamantelKol3
+{  
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 14px; 
+	font-style: normal; 
+	line-height: normal; 
+	font-weight: bold; 
+	font-variant: normal; 
+	text-transform: none;
+	text-align: right;
+}
+.RammaBottom 
+{ 
+	border: #3F8CA3 solid; 
+	border-width: 0px 0px 1px;
+}
+a 
+{  
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	font-style: normal; 
+	line-height: normal; 
+	font-weight: bold; 
+	font-variant: normal; 
+	text-transform: none; 
+	color: #FFFFFF; 
+	text-decoration: none;
+}
+a:hover 
+{  
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 13px; 
+	font-style: normal; 
+	line-height: normal; 
+	font-weight: bold; 
+	font-variant: normal; 
+	text-transform: none; 
+	color: #CCCCCC; 
+	text-decoration: underline;
+}
+.link 
+{  
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 13px; 
+	font-style: normal; 
+	line-height: normal; 
+	font-weight: normal; 
+	font-variant: normal; 
+	text-transform: none; 
+	color: #000000; 
+	text-decoration: none;
+}
+.link:a 
+{  
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 13px; 
+	font-style: normal; 
+	line-height: normal; 
+	font-weight: normal; 
+	font-variant: normal; 
+	text-transform: none; 
+	color: #000000; 
+	text-decoration: none;
+}
+.link:a:hover 
+{  
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 13px; 
+	font-style: normal; 
+	line-height: normal; 
+	font-weight: normal; 
+	font-variant: normal; 
+	text-transform: none; 
+	color: #999999; 
+	text-decoration: underline;
+}
+.RammaValTop
+{ 
+	border: #cdcdcd solid; 
+	border-width: 1px 1px 0px 1px;
+}
+.RammaValMiddle
+{ 
+	border: #cdcdcd solid; 
+	border-width: 0px 1px 0px 1px;
+}
+.RammaValBottom
+{ 
+	border: #cdcdcd solid; 
+	border-width: 0px 1px 1px 1px;
+}
+
+.Font11Pt {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-style: normal; line-height: normal; font-weight: normal; font-variant: normal; text-transform: none; color: #000000}
+.VdValdir {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: normal; font-weight: normal; font-variant: normal; text-transform: none; color: #000000; text-align: left; width: 560px; border: #999999 solid; border-width: 1px 1px 1px 1px}
+.Flokkar {  
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	font-style: normal; 
+	line-height: normal; 
+	font-weight: normal; 
+	font-variant: normal; 
+	text-transform: none; 
+	color: #000000; 
+	text-align: left; 
+	width: 560px; 
+	border: #999999 solid; 
+	border-width: 1px 1px 1px 1px;
+}
+.Listi0 {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: normal; font-weight: normal; font-variant: normal; text-transform: none; color: #000000; text-align: left; width: 180px; border: #999999 solid; border-width: 1px 1px 1px 1px;float:left;}
+.Listi1 {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: normal; font-weight: normal; font-variant: normal; text-transform: none; color: #000000; text-align: left; width: 180px; border: #999999 solid; border-width: 1px 1px 1px 1px;float:left;}
+.Listi2 {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: normal; font-weight: normal; font-variant: normal; text-transform: none; color: #000000; text-align: left; width: 180px; border: #999999 solid; border-width: 1px 1px 1px 1px;}
+.Listi3 {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: normal; font-weight: normal; font-variant: normal; text-transform: none; color: #000000; text-align: left; width: 180px; border: #999999 solid; border-width: 1px 1px 1px 1px;float:left;}
+.Listi4 {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: normal; font-weight: normal; font-variant: normal; text-transform: none; color: #000000; text-align: left; width: 180px; border: #999999 solid; border-width: 1px 1px 1px 1px;float:left;}
+.Listi5 {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: normal; font-weight: normal; font-variant: normal; text-transform: none; color: #000000; text-align: left; width: 180px; border: #999999 solid; border-width: 1px 1px 1px 1px;}
+.Listi6 {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: normal; font-weight: normal; font-variant: normal; text-transform: none; color: #000000; text-align: left; width: 180px; border: #999999 solid; border-width: 1px 1px 1px 1px;float-left;}
+.Listi7 {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: normal; font-weight: normal; font-variant: normal; text-transform: none; color: #000000; text-align: left; width: 180px; border: #999999 solid; border-width: 1px 1px 1px 1px;float-left;}
+.Listi8 {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: normal; font-weight: normal; font-variant: normal; text-transform: none; color: #000000; text-align: left; width: 180px; border: #999999 solid; border-width: 1px 1px 1px 1px;}
+.ListiYvir1 { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: normal; font-weight: bold; font-variant: normal; text-transform: none; color: #ffffff; background-color: #000000; }
+
+.ListiYvir1_print { font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: normal; font-weight: bold; font-variant: normal; text-transform: none; color: #000000; background-color: #ffffff}
+.Flokkar_print {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: normal; font-weight: normal; font-variant: normal; text-transform: none; color: #000000; text-align: left; width: 560px; border: #999999 solid; border-width: 1px 1px 1px 1px}
+
+.FlkAtkvTils {font-weight: bold; text-align: right;}
+.FlkAtkvSeinTils {font-weight: bold; text-align: right;}
+.FlkValraett {font-weight: bold; text-align: right;}
+.FlkLuttoka {font-weight: bold; text-align: right;}
+.FlkValraettSein {font-weight: bold; text-align: right;}
+.FlkLuttokaSein {font-weight: bold; text-align: right;}
+
+.FlkAtkvTilsTekst {font-weight: bold;}
+.FlkLuttokaTekst {font-weight: bold;}
+
+.FlkAtkv {text-align: right;}
+.FlkAtkvPrs {text-align: right;}
+.FlkAtkvSein {text-align: right;}
+.FlkAtkvSeinPrs {text-align: right;}
+.FlkMunurPluss {text-align: right;}
+.FlkMunurMinus {text-align: right; color: #ff0000;}
+
+.FlkYvirAtkv {text-align: right; font-weight: bold;}
+.FlkYvirAtkvPrs {text-align: right; font-weight: bold;}
+.FlkYvirAtkvSein {text-align: right; font-weight: bold;}
+.FlkYvirAtkvSeinPrs {text-align: right; font-weight: bold;}
+.FlkYvirMunurPrs {text-align: right; font-weight: bold;}
+
+.VdValdirYvirBokstavur {text-align: left; font-weight: bold;}
+.VdValdirYvirNavn {text-align: left; font-weight: bold;}
+.VdValdirYvirAtkv {text-align: left; font-weight: bold;}
+
+.FlkRegla2 {background: #efefef;}
+
+.FlkTing {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: normal; font-weight: normal; font-variant: normal; text-transform: none; color: #000000; text-align: left; width: 560px; border: #999999 solid; border-width: 1px 1px 1px 1px}
+.ToppsVd {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: normal; font-weight: normal; font-variant: normal; text-transform: none; color: #000000; text-align: left; width: 560px; border: #999999 solid; border-width: 1px 1px 1px 1px}
+
+.ToppsVdKolValdurYv {text-align: left; font-weight: bold;}
+.ToppsVdKolListiYv {text-align: left; font-weight: bold;}
+.ToppsVdKolNavnYv {text-align: left; font-weight: bold;}
+.ToppsVdKolAtkvYv {text-align: right; font-weight: bold;}
+.ToppsVdKolProsentYv {text-align: right; font-weight: bold;}
+.FlkYvirValdir {text-align: right; font-weight: bold;}
+
+.ToppsVdRegla2 {background: #efefef;}
+
+.ToppsVdKolProsent {text-align: right;}
+.ToppsVdKolAtkv {text-align: right;}
+
+.FlkYvirVd {text-align: left; font-weight: bold;}
+.FlkYvirEy {text-align: left; font-weight: bold;}
+.FlkYvirTils {text-align: left; font-weight: bold;}
+.FlkYvirMunur {text-align: left; font-weight: bold;}
+.FlkValdir {text-align: right; font-weight: normal;}
+
+.LogtingFlk0 {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: normal; font-weight: normal; font-variant: normal; text-transform: none; color: #000000; text-align: left; width: 560px; border: #999999 solid; border-width: 1px 1px 1px 1px}
+.LogtingFlk1 {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: normal; font-weight: normal; font-variant: normal; text-transform: none; color: #000000; text-align: left; width: 560px; border: #999999 solid; border-width: 1px 1px 1px 1px}
+.LogtingFlk2 {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: normal; font-weight: normal; font-variant: normal; text-transform: none; color: #000000; text-align: left; width: 560px; border: #999999 solid; border-width: 1px 1px 1px 1px}
+.LogtingFlk3 {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: normal; font-weight: normal; font-variant: normal; text-transform: none; color: #000000; text-align: left; width: 560px; border: #999999 solid; border-width: 1px 1px 1px 1px}
+.LogtingFlk4 {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: normal; font-weight: normal; font-variant: normal; text-transform: none; color: #000000; text-align: left; width: 560px; border: #999999 solid; border-width: 1px 1px 1px 1px}
+.LogtingFlk5 {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: normal; font-weight: normal; font-variant: normal; text-transform: none; color: #000000; text-align: left; width: 560px; border: #999999 solid; border-width: 1px 1px 1px 1px}
+.LogtingFlk6 {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: normal; font-weight: normal; font-variant: normal; text-transform: none; color: #000000; text-align: left; width: 560px; border: #999999 solid; border-width: 1px 1px 1px 1px}
+.LogtingFlk7 {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: normal; font-weight: normal; font-variant: normal; text-transform: none; color: #000000; text-align: left; width: 560px; border: #999999 solid; border-width: 1px 1px 1px 1px}
+.LogtingFlk8 {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: normal; font-weight: normal; font-variant: normal; text-transform: none; color: #000000; text-align: left; width: 560px; border: #999999 solid; border-width: 1px 1px 1px 1px}
+
+.LogtingFlkYvirNavn {text-align: left; font-weight: bold;}
+.LogtingFlkRegla2 {background: #efefef;}
+
+.ToppsLand {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: normal; font-weight: normal; font-variant: normal; text-transform: none; color: #000000; text-align: left; width: 560px; border: #999999 solid; border-width: 1px 1px 1px 1px}
+.ToppsVdKolNavn { width: 400px; }
+.LogtingFlkNavn { width: 400px; }
+
+.ListiValevniNavn { text-align: left; vertical-align: top; }
+.ListiValevniNr { text-align: left; vertical-align: top; }
+.ListiValevniAtkv { text-align: right; vertical-align: top; }
+.ListiAtkvTils { text-align: right; vertical-align: top; }
+.ListiListaAtkv { text-align: right; vertical-align: top; }
+
