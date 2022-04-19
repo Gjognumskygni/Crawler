@@ -1,0 +1,231 @@
+p{
+			margin:0;
+		}
+		body
+		{
+			font-family:Arial, Helvetica, sans-serif;
+		}
+		td{
+                	margin:0px;
+	                padding:0px;
+		        text-align:left;
+			vertical-align:top;
+		}
+
+		.boxxy
+		{
+			background: #F2F2F2;
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FAFAFA', endColorstr='#F2F2F2');
+			background: -webkit-gradient(linear, left top, left bottom, from(#FAFAFA), to(#F2F2F2));
+			background: -moz-linear-gradient(top,  #FAFAFA,  #F2F2F2);
+		}
+		.blackline
+		{
+			z-index:10;
+			position:relative;
+			width:790px;
+			overflow:hidden;
+			background: #313131;
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#585858', endColorstr='#000000');
+			background: -webkit-gradient(linear, left top, left bottom, from(#585858), to(#000000));
+			background: -moz-linear-gradient(top,  #585858,  #000000);
+			height:25px;
+			font-size:22px;
+			margin-top:10px;
+		}
+		.bokstavur
+		{
+			padding-left:5px;
+			padding-right:5px;
+			margin-left:25px;
+			margin-right:25px;
+			float:left;
+			color:#FFF;
+			height:100%;
+			width:18px;
+		}
+		.A
+		{
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#03B76F', endColorstr='#00814D');
+			background: -webkit-gradient(linear, left top, left bottom, from(#03B76F), to(#00814D));
+			background: -moz-linear-gradient(top,  #03B76F,  #00814D);
+			background-color:#35B26E;
+		}
+		.B
+		{
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0384B7', endColorstr='#005E83');
+			background: -webkit-gradient(linear, left top, left bottom, from(#0384B7), to(#005E83));
+			background: -moz-linear-gradient(top,  #0384B7,  #005E83);
+			background-color:#02729E;
+		}
+		.C
+		{
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#B70F03', endColorstr='#810801');
+			background: -webkit-gradient(linear, left top, left bottom, from(#B70F03), to(#810801));
+			background: -moz-linear-gradient(top,  #B70F03,  #810801);
+			background-color:#9E0C02;
+		}
+		.D
+		{
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#78B703', endColorstr='#548200');
+			background: -webkit-gradient(linear, left top, left bottom, from(#78B703), to(#548200));
+			background: -moz-linear-gradient(top,  #78B703,  #548200);
+			background-color:#679D01;
+		}
+		.E
+		{
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#B7A703', endColorstr='#827602');
+			background: -webkit-gradient(linear, left top, left bottom, from(#B7A703), to(#827602));
+			background: -moz-linear-gradient(top,  #B7A703,  #827602);
+		}
+		.F,.L,.X
+		{
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#B76E03', endColorstr='#824D02');
+			background: -webkit-gradient(linear, left top, left bottom, from(#B76E03), to(#824D02));
+			background: -moz-linear-gradient(top,  #B76E03,  #824D02);
+			background-color:#9A5C01;
+		}
+		.H
+		{
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0357B7', endColorstr='#003D84');
+			background: -webkit-gradient(linear, left top, left bottom, from(#0357B7), to(#003D84));
+			background: -moz-linear-gradient(top,  #0357B7,  #003D84);
+			background-color:#014A9D;
+		}
+		.flokknavn
+		{
+			float:left;
+			color:#FFF;
+			width:280px;
+		}
+		.tal1
+		{
+			float:left;
+			color:#FFF;
+			width:75px;
+			font-weight:bold;
+			text-align:right;
+		}
+		.tal2
+		{
+			float:left;
+			color:#FFF;
+			width:90px;
+			text-align:right;
+		}
+		.tal3
+		{
+			float:left;
+			color:#ADADAD;
+			width:95px;
+			font-weight:bold;
+			text-align:right;
+		}
+		.tal4
+		{
+			float:left;
+			color:#ADADAD;
+			width:80px;
+			text-align:right;
+		}
+		.tal5
+		{
+			float:right;
+			padding-right:10px;
+			color:#FFF;
+			text-align:right;
+		}
+		.pluss{
+			color:#66AA33;
+		}
+		.minus{
+			color:#F00;
+		}
+		.main{
+			overflow:hidden;
+			
+			width:790px;
+	/*		border:solid 2px #000;*/
+		}
+		.top{
+			position:relative;
+	/*		border:solid 1px #000; */
+		}
+		.floater
+		{
+			position:absolute;
+			background-color:#D8D8D8;
+			top:0px;
+			bottom:0px;
+			left:355px;
+			right:260px;
+			z-index:1;
+		}
+		.Y1
+		{
+			float:right;
+			padding-right:90px;
+			font-size:32px;
+		}
+		.Y2
+		{
+			float:right;
+			padding-right:105px;
+			font-size:32px;
+		}
+		.sum{
+			overflow:auto;
+			z-index:10;
+			position:relative;
+		}
+		.sum div{
+			float:right;
+			padding-right:358px;
+			font-size:22px;
+			padding-top:5px;
+			padding-bottom:5px;
+		}
+		.flokktal
+		{
+			float:right;
+			padding-right:10px;
+		}
+		.linel
+		{
+			background-color:#EAEAEA;
+			width:350px;
+			overflow:auto;
+			padding-top:3px;
+			padding-bottom:3px;
+		}
+		.lined
+		{
+			background-color:#E0E0E0;
+			width:350px;
+			overflow:auto;
+			padding-top:3px;
+			padding-bottom:3px;
+		}
+		.navn
+		{
+			padding-left:15px;
+			float:left;
+		}
+		.minisum
+		{
+			float:right;
+			padding-right:10px;
+		}
+		.bigsum
+		{
+			float:right;
+			padding-right:10px;
+			font-weight:bold;
+		}
+		.topsum
+		{
+			float:right;
+			padding-right:10px;
+		}
+	</style>
+
